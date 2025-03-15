@@ -9,4 +9,4 @@ example/yarn.lock
 .jest/
 
 # ts outDir
-lib/
+# lib/
