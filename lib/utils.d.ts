@@ -16,10 +16,11 @@ export declare const askAppChoice: ({ dialogTitle, dialogMessage, cancelText, ap
 export declare const getDirectionsModeAppleMaps: (directionsMode: 'car' | 'walk' | 'public-transport' | 'bike' | undefined) => string | undefined;
 export declare const getDirectionsModeGoogleMaps: (directionsMode: 'car' | 'walk' | 'public-transport' | 'bike' | undefined) => string | undefined;
 export declare const getDirectionsModeSygic: (directionsMode: 'car' | 'walk' | 'public-transport' | 'bike' | undefined) => string | undefined;
-export declare const checkOptions: ({ latitude, longitude, address, googleForceLatLon, googlePlaceId, title, app, prefixes, appTitles, appsWhiteList, }: {
+export declare const checkOptions: ({ latitude, longitude, address, words, googleForceLatLon, googlePlaceId, title, app, prefixes, appTitles, appsWhiteList, }: {
     latitude?: string | number | undefined;
     longitude?: string | number | undefined;
     address?: string | null | undefined;
+    words?: string | null | undefined;
     googleForceLatLon?: boolean | null | undefined;
     googlePlaceId?: number | string | null | undefined;
     title?: string | null | undefined;
@@ -28,7 +29,7 @@ export declare const checkOptions: ({ latitude, longitude, address, googleForceL
     prefixes: Record<string, string>;
     appsWhiteList: string[] | null | undefined;
 }) => void;
-export declare const generateMapUrl: ({ app, directionsMode, appleIgnoreLatLon, googleForceLatLon, googlePlaceId, naverCallerName, lat, lng, latlng, sourceLat, sourceLng, sourceLatLng, address, title, encodedTitle, prefixes, useSourceDestiny, }: {
+export declare const generateMapUrl: ({ app, directionsMode, appleIgnoreLatLon, googleForceLatLon, googlePlaceId, naverCallerName, lat, lng, latlng, sourceLat, sourceLng, sourceLatLng, address, words, title, encodedTitle, prefixes, useSourceDestiny, }: {
     app: string | null;
     directionsMode: 'car' | 'walk' | 'public-transport' | 'bike' | undefined;
     appleIgnoreLatLon?: boolean | undefined;
@@ -42,6 +43,7 @@ export declare const generateMapUrl: ({ app, directionsMode, appleIgnoreLatLon, 
     sourceLng?: number | undefined;
     sourceLatLng?: string | undefined;
     address?: string | null | undefined;
+    words?: string | null | undefined;
     title?: string | null | undefined;
     encodedTitle?: string | undefined;
     prefixes: Record<string, string>;
