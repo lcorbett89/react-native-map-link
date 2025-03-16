@@ -24,6 +24,7 @@ const schemes = [
   'lftgpas',
   'petalmaps',
   'sygic',
+  'w3w',
 ];
 
 const intents = ['geo', 'waze'].map((app) => {
